@@ -1,0 +1,134 @@
+---
+title: Changelog
+description: Version history with 2-3 recent updates, release notes, and improvement logs.
+---
+
+## Changelog Overview
+
+Stay up to date with the latest releases of RazPro Business Solutions. Each release includes new features, bug fixes, and improvements to help you manage your business more effectively.
+
+<Callout kind="info">
+  Check the [release notes](https://github.com/razpro/releases) on GitHub for full details and migration guides.
+</Callout>
+
+## Recent Releases
+
+<Update label="2024-10-15" description="v2.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added QuickBooks Online integration for seamless accounting sync.
+- Introduced profit analytics dashboard with real-time insights.
+- New advisory tools for cost reduction recommendations.
+
+## Improvements
+
+- Enhanced consulting module with customizable business templates.
+- Optimized performance for large datasets (`<50%` load time reduction).
+
+## Bug Fixes
+
+- Fixed sync errors with QuickBooks Desktop.
+- Resolved dashboard refresh issues in low-connectivity environments.
+
+</Update>
+
+<Update label="2024-09-20" description="v2.0.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Updated API endpoints to use `/v2/` prefix. Migrate from `/v1/` paths.
+- Removed legacy QuickBooks export format. Use new CSV/JSON options.
+
+## New Features
+
+- Comprehensive business coaching suite with goal tracking.
+- Automated cost analysis reports emailed weekly.
+
+## Bug Fixes
+
+- Corrected profit calculation discrepancies.
+- Fixed mobile view layout for advisory panels.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.5.0" tags={["bugfix", "improvement"]}>
+
+## Improvements
+
+- Upgraded consulting workflows with drag-and-drop builders.
+- Added support for multi-client management.
+
+## Bug Fixes
+
+- Patched security vulnerability in session handling (CVE-2024-XXXX).
+- Resolved data import failures from Excel files.
+
+</Update>
+
+## Upcoming Roadmap
+
+<Board title="Release Pipeline">
+  <BoardColumn title="Planned" color="0" icon="calendar">
+    <BoardCard title="AI Profit Predictor" description="Machine learning for revenue forecasting" icon="zap" dueDate="2024-12-01" />
+    <BoardCard title="Advanced Webhook Support" description="Real-time notifications for business events" icon="bell" />
+  </BoardColumn>
+  <BoardColumn title="In Progress" color="1" icon="loader">
+    <BoardCard title="Enterprise SSO" description="SAML and OAuth enterprise login" icon="shield" author="Dev Team" />
+  </BoardColumn>
+  <BoardColumn title="Completed" color="2" icon="check-circle">
+    <BoardCard title="v2.1.0 Release" description="QuickBooks enhancements" createdAt="2024-10-15" />
+  </BoardColumn>
+</Board>
+
+## Upgrading to the Latest Version
+
+Follow these steps to upgrade RazPro safely.
+
+<Steps>
+  <Step title="Backup Data" icon="database">
+    Export your current data using the dashboard export tool.
+  </Step>
+  <Step title="Update Client" icon="download">
+    Install the latest version based on your platform.
+    <CodeGroup tabs="npm,Docker">
+      ````bash
+      npm update razpro-client --save
+      ````
+      ````bash
+      docker pull razpro/business-solutions:latest
+      docker-compose up -d
+      ````
+    </CodeGroup>
+  </Step>
+  <Step title="Run Migrations" icon="settings">
+    Execute database migrations.
+    ````bash
+    razpro migrate --env production
+    ````
+  </Step>
+  <Step title="Verify Integration" icon="check-circle">
+    Test QuickBooks sync and profit reports.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  For breaking changes in v2.0.0, review the migration guide in your account settings.
+</Callout>
+
+## Resources
+
+<Columns cols={2}>
+  <Card title="Migration Guide" icon="book-open" href="/docs/upgrading">
+    Detailed steps for v1 to v2 migration.
+  </Card>
+  <Card title="API Reference" icon="code" href="/docs/api">
+    Updated endpoints and examples.
+  </Card>
+  <Card title="Support" icon="help-circle" href="https://razpro.us/contact">
+    Contact us for assistance.
+  </Card>
+  <Card title="GitHub Releases" icon="github" href="https://github.com/razpro/releases" target="_blank">
+    Full changelogs and assets.
+  </Card>
+</Columns>

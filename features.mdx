@@ -1,0 +1,119 @@
+---
+title: Features Overview
+description: Explore core capabilities of RazPro's documentation platform with use cases for business teams.
+---
+
+## Overview
+
+RazPro Business Solutions provides a powerful documentation platform to organize project knowledge, streamline workflows, and empower your business teams. You can create rich documents, collaborate in real-time, search efficiently, and customize spaces to fit your needs. This guide covers the core features with practical use cases for managing business documentation like financial reports, project plans, and client guides.
+
+<Columns cols={2}>
+  <Card title="Quick Creation" icon="edit-3" href="/quickstart">
+    Start new documents instantly with templates tailored for business use cases.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="/authentication">
+    Invite team members and track changes seamlessly.
+  </Card>
+  <Card title="Advanced Search" icon="search" href="#search-features">
+    Find content across projects with powerful filters.
+  </Card>
+  <Card title="Custom Workspaces" icon="settings" href="#customization">
+    Tailor your documentation environment.
+  </Card>
+</Columns>
+
+## Document Creation and Editing Tools
+
+Build professional documents using an intuitive editor that supports markdown, rich text, and embeds. You start by creating a new page from templates optimized for business needs, such as QuickBooks setup guides or profitability analysis reports.
+
+<Steps>
+  <Step title="Create a New Document" icon="plus">
+    Navigate to your project space and select `New Page`. Choose a template like "Business Report".
+  </Step>
+  <Step title="Edit Content" icon="edit-3">
+    Use the visual editor for headings, lists, and tables. Switch to markdown for advanced formatting.
+  </Step>
+  <Step title="Add Media" icon="image">
+    Drag and drop images or embed charts from tools like Google Sheets.
+  </Step>
+</Steps>
+
+For code-heavy docs, integrate snippets directly:
+
+<CodeGroup tabs="Markdown,Rich Text">
+  ```markdown
+  ## Profit Analysis
+
+  | Metric | Q1 | Q2 |
+  |--------|----|----|
+  | Revenue | $150k | $200k |
+  | Costs | $100k | $120k |
+  ```
+  ```html
+  <h2>Profit Analysis</h2>
+  <table>
+    <tr><th>Metric</th><th>Q1</th><th>Q2</th></tr>
+    <tr><td>Revenue</td><td>$150k</td><td>$200k</td></tr>
+    <tr><td>Costs</td><td>$100k</td><td>$120k</td></tr>
+  </table>
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+  Use keyboard shortcuts like `Ctrl+B` for bold and `Ctrl+K` for links to speed up editing.
+</Callout>
+
+## Collaboration and Version History
+
+Enable team collaboration with real-time editing and granular version control. Multiple users edit simultaneously, and changes appear instantly. Track history to revert or compare versions effortlessly.
+
+<Tabs>
+  <Tab title="Invite Collaborators" icon="users">
+    Share a page link or add emails via the `Share` button. Set permissions: view, edit, or admin.
+  </Tab>
+  <Tab title="Version History" icon="git-branch">
+    Click `History` to see diffs. Restore any version with one click.
+  </Tab>
+</Tabs>
+
+## Search and Organization Features
+
+Locate documents quickly across projects using full-text search with filters for tags, authors, and dates. Organize with folders, tags, and custom hierarchies.
+
+| Feature | Description | Use Case |
+|---------|-------------|----------|
+| Global Search | Searches titles, content, and metadata | Find "profit margin" across all financial docs |
+| Tag Filters | Apply tags like `Q1-2024`, `client-report` | Group profitability analyses |
+| Saved Searches | Pin frequent queries | Quick access to team project updates |
+
+## Customization Options for Projects
+
+Tailor your documentation space to match business workflows. Customize themes, sidebar navigation, and permissions per project.
+
+<Expandable title="Advanced Customization" default-open="false">
+  Edit your space settings to:
+
+  - Set a custom `{brandColor}` like `#1e5989` for RazPro branding.
+  - Configure navigation with pinned pages.
+  - Integrate webhooks for external notifications.
+
+  Example config snippet:
+
+  ````json
+  {
+    "theme": {
+      "primaryColor": "#1e5989"
+    },
+    "features": {
+      "realTimeCollab": true,
+      "versionHistory": true
+    }
+  }
+  ````
+</Expandable>
+
+<Callout kind="success">
+  Start customizing in your project settings to align with RazPro's business coaching tools.
+</Callout>
+
+Ready to dive deeper? Check the [quickstart](/quickstart) or [authentication](/authentication) guides.

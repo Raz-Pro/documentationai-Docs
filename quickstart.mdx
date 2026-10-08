@@ -1,0 +1,194 @@
+---
+title: Quickstart: Get Started
+description: Guide users through account setup, first project creation, and initial documentation organization in under 5 minutes.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A valid email address for account verification
+- Access to a modern web browser like Chrome or Firefox
+- Optional: Team member emails ready for invitations
+
+<Callout kind="info">
+
+This quickstart takes under 5 minutes. No credit card or downloads required.
+
+</Callout>
+
+## Create and Verify Your Account
+
+Follow these steps to set up your RazPro Business Solutions account.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+
+  Visit `https://app.razpro.us/signup` and enter your email, name, and a strong password.
+
+  Click **Create Account**.
+
+  </Step>
+
+  <Step title="Verify Email" icon="mail">
+
+  Check your inbox for a verification email from RazPro.
+
+  Click the **Verify** button in the email.
+
+  <Image
+    src="https://via.placeholder.com/600x300/1e5989/ffffff?text=Verify+Email+Screenshot"
+    alt="Email verification screen"
+    width="600"
+    height="300"
+  />
+
+  </Step>
+
+  <Step title="Log In" icon="log-in">
+
+  Return to `https://app.razpro.us/login` and sign in with your verified credentials.
+
+  You'll land on the dashboard.
+
+  </Step>
+</Steps>
+
+## Set Up Your First Documentation Space
+
+Documentation spaces organize your business projects, QuickBooks solutions, and client guides.
+
+<Steps>
+  <Step title="Create Space" icon="folder-plus">
+
+  From the dashboard, click **New Space**.
+
+  Name it (e.g., "Q4 Profit Optimization") and select **Business Solutions** template.
+
+  </Step>
+
+  <Step title="Customize Sidebar" icon="settings">
+
+  Edit the sidebar: Add sections like "Profit Strategies", "Cost Reduction", and "Client Testimonials".
+
+  Drag to reorder.
+
+  </Step>
+</Steps>
+
+## Add and Organize Initial Pages
+
+Populate your space with essential pages.
+
+<Tabs>
+  <Tab title="Manual Creation" icon="plus">
+
+  <Steps>
+    <Step title="New Page">
+
+    In your space, click **New Page** > **Blank Page**.
+
+    Title it "Profit Analysis" and add content.
+
+    </Step>
+
+    <Step title="Organize">
+
+    Drag pages into sections: Nest "Reduce Costs" under "Strategies".
+
+    Publish to make live.
+
+    </Step>
+  </Steps>
+
+  </Tab>
+
+  <Tab title="Import Markdown" icon="upload">
+
+````markdown
+# Profit Goals
+
+## Metrics
+- Profit: `>20%`
+- Cost Reduction: `<15%`
+
+## Next Actions
+1. Review QuickBooks data
+2. Schedule advisory call
+```
+````
+
+  Copy your MDX or Markdown file and import via **Import** button.
+
+  </Tab>
+</Tabs>
+
+## Invite Team Members
+
+Share access with your business coach team or clients.
+
+<CodeGroup tabs="Dashboard,API">
+```javascript
+// Dashboard invite (copy from UI)
+POST https://api.example.com/v1/teams/{teamId}/invites
+{
+  "email": "coach@business.com",
+  "role": "editor"
+}
+```
+
+```bash
+curl -X POST https://api.example.com/v1/teams/{teamId}/invites \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -d '{"email":"coach@business.com","role":"editor"}'
+```
+</CodeGroup>
+
+<ParamField path="teamId" param-type="string" required="true">
+  Your documentation space ID (found in settings).
+</ParamField>
+
+<ParamField query="role" param-type="string" required="false">
+  Options: `viewer`, `editor`, `admin`. Defaults to `viewer`.
+</ParamField>
+
+## Next Steps
+
+Explore more features to transform your documentation.
+
+<Columns cols={2}>
+  <Card title="Business Advisory Guides" icon="book-open" href="/authentication">
+    Secure your client testimonials and advisory notes.
+  </Card>
+
+  <Card title="Configuration" icon="settings" href="/configuration">
+    Customize themes with brand color `#1e5989`.
+  </Card>
+
+  <Card title="Advanced Workflows" icon="zap" href="/guides">
+    Set up QuickBooks integrations and profit trackers.
+  </Card>
+
+  <Card title="Changelog" icon="git-branch" href="/changelog" horizontal>
+    Stay updated with new features.
+  </Card>
+</Columns>
+
+<Callout kind="tip" default-open="true">
+
+Ready to boost profitability? Your first space is live—share it with your team now!
+
+</Callout>
+
+<Board title="Documentation Roadmap">
+  <BoardColumn title="To Do" icon="circle">
+    <BoardCard title="Add QuickBooks Guide" description="Document cost reduction steps" dueDate="2024-12-15" />
+    <BoardCard title="Client Testimonials" icon="star" />
+  </BoardColumn>
+  <BoardColumn title="In Progress" icon="loader-circle">
+    <BoardCard title="Profit Metrics Dashboard" author="You" />
+  </BoardColumn>
+  <BoardColumn title="Done" icon="check-circle" color="2">
+    <BoardCard title="Account Setup" createdAt="2024-12-01" />
+  </BoardColumn>
+</Board>
